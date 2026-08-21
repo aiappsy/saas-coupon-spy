@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "SaaS Coupon Spy — AI & Software Discounts",
+  "version": "1.0.0",
+  "description": "Automatically finds, tests, and applies verified promo codes for AI tools, SaaS subscriptions, and cloud hosting.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "SaaS Coupon Spy"
+  },
+  "background": {
+    "service_worker": "src/background/serviceWorker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  }
+}

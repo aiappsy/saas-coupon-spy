@@ -1,0 +1,25 @@
+{
+  "name": "saas-coupon-spy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Honey for SaaS & AI Tools — Chrome Extension & Cloud Admin Hub",
+  "scripts": {
+    "dev:admin": "cd apps/admin && npm run dev",
+    "dev:extension": "cd apps/extension && npm run dev",
+    "build:admin": "cd apps/admin && npm run build",
+    "build:extension": "cd apps/extension && npm run build",
+    "package:extension": "cd apps/extension && npm run package",
+    "build": "npm run build:admin && npm run build:extension"
+  },
+  "keywords": [
+    "saas",
+    "coupons",
+    "ai-tools",
+    "discounts",
+    "chrome-extension",
+    "nextjs",
+    "gemini-ai"
+  ],
+  "author": "Pål Alexander Juritzen",
+  "license": "MIT"
+}
